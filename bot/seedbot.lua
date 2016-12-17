@@ -228,23 +228,36 @@ function create_config( )
     "invite",
     "all",
     "leave_ban",
-	"supergroup",
-	"whitelist",
-	"msg_checks"
+    "supergroup",
+    "whitelist",
+    "msg_checks",
+    "plugins",
+    "setwelcome",
+    "anti-bot",
+    "expiretime",
+    "getwelcome",
+    "delall",
+    "cleanmm",
+    "chatter",
+    "filter",
+    "lock_fwd",
+    "antiemoji",
+    "antitag",
+    "antiuser",
+    "antien",
+    "helpar",
+    "helpen"
     },
-    sudo_users = {110626080,103649648,111020322,0,tonumber(our_id)},--Sudo users
+    sudo_users = {112235430,0,tonumber(our_id)},--Sudo users
     moderation = {data = 'data/moderation.json'},
-    about_text = [[Teleseed v4
+    about_text = [[zaza bot v2
 An advanced administration bot based on TG-CLI written in Lua
 
-https://github.com/Joker-development/Joker_development
+https://github.com/wounds2/zazamark
 Admins
-@iwals [Founder]
-@imandaneshi [Developer]
-@POTUS [Developer]
-@seyedan25 [Manager]
-@aRandomStranger [Admin]
-
+@wounds1
+@mmff1
+@Jozef3
 Special thanks to
 awkward_potato
 Siyanew
@@ -252,11 +265,8 @@ topkecleon
 Vamptacus
 
 Our channels
-@teleseedch [English]
-@iranseed [persian]
+@C9_pro
 
-Our website 
-http://teleseed.seedteam.org/
 ]],
     help_text_realm = [[
 Realm Commands:
