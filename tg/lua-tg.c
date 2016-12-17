@@ -1,20 +1,11 @@
 /*
-    This file is part of telegram-cli.
+With the support of the HTML format 
+( msg & Reply )
 
-    Telegram-cli is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 2 of the License, or
-    (at your option) any later version.
-
-    Telegram-cli is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-
-    You should have received a copy of the GNU General Public License
-    along with this telegram-cli.  If not, see <http://www.gnu.org/licenses/>.
-
-    Copyright Vitaly Valtman 2013-2015
+*******************
+*   ReZa Hextor   *
+*  @HEXTOR_CH     *
+*******************
 */
 
 #ifdef HAVE_CONFIG_H
@@ -689,6 +680,7 @@ enum lua_query_type {
   lq_send_typing_abort,
   lq_rename_chat,
   lq_send_photo,
+  lq_photo_caption,
   lq_chat_set_photo,
   lq_set_profile_photo,
   lq_set_profile_name,
@@ -1223,7 +1215,7 @@ void lua_do_all (void) {
       tgl_do_get_dialog_list (TLS, 100, 0, lua_dialog_list_cb, lua_ptr[p ++].ptr);
       break;
     case lq_msg:
-      tgl_do_send_message (TLS, lua_ptr[p + 1].peer_id, LUA_STR_ARG (p + 2), 0, NULL, lua_msg_cb, lua_ptr[p].ptr);
+      tgl_do_send_message (TLS, lua_ptr[p + 1].peer_id, LUA_STR_ARG (p + 2), TGLMF_HTML, NULL, lua_msg_cb, lua_ptr[p].ptr);
       p += 3;
       break;
     case lq_msg_channel:
@@ -1246,6 +1238,10 @@ void lua_do_all (void) {
       tgl_do_send_document (TLS, lua_ptr[p + 1].peer_id, lua_ptr[p + 2].str, NULL, 0, TGL_SEND_MSG_FLAG_DOCUMENT_PHOTO, lua_msg_cb, lua_ptr[p].ptr);
       p += 3;
       break;
+	case lq_photo_caption:
+	   tgl_do_send_document (TLS, lua_ptr[p + 1].peer_id, lua_ptr[p + 2].str, lua_ptr[p + 3].str, 200, TGL_SEND_MSG_FLAG_DOCUMENT_PHOTO, lua_msg_cb, lua_ptr[p].ptr);
+      p += 4;
+      break;
     case lq_send_video:
       tgl_do_send_document (TLS, lua_ptr[p + 1].peer_id, lua_ptr[p + 2].str, NULL, 0, TGL_SEND_MSG_FLAG_DOCUMENT_VIDEO, lua_msg_cb, lua_ptr[p].ptr);
       p += 3;
@@ -1263,7 +1259,7 @@ void lua_do_all (void) {
       p += 3;
       break;
     case lq_send_text:
-      tgl_do_send_text (TLS, lua_ptr[p + 1].peer_id, lua_ptr[p + 2].str, 0, lua_msg_cb, lua_ptr[p].ptr);
+      tgl_do_send_text (TLS, lua_ptr[p + 1].peer_id, lua_ptr[p + 2].str, TGLMF_HTML, lua_msg_cb, lua_ptr[p].ptr);
       p += 3;
       break;
     case lq_chat_set_photo:
@@ -1307,7 +1303,7 @@ void lua_do_all (void) {
       p += 2;
       break;
     case lq_reply:
-      tgl_do_reply_message (TLS, &lua_ptr[p + 1].msg_id, LUA_STR_ARG (p + 2), 0, lua_msg_cb, lua_ptr[p].ptr);
+      tgl_do_reply_message (TLS, &lua_ptr[p + 1].msg_id, LUA_STR_ARG (p + 2), TGLMF_HTML, lua_msg_cb, lua_ptr[p].ptr);
       p += 3;
       break;
     case lq_fwd:
@@ -1571,6 +1567,7 @@ struct lua_function functions[] = {
   {"send_typing", lq_send_typing, { lfp_peer, lfp_none }},
   {"send_typing_abort", lq_send_typing_abort, { lfp_peer, lfp_none }},
   {"send_photo", lq_send_photo, { lfp_peer, lfp_string, lfp_none }},
+  {"photo_caption", lq_send_photo, { lfp_peer, lfp_string,lfp_string, lfp_none }},
   {"send_video", lq_send_video, { lfp_peer, lfp_string, lfp_none }},
   {"send_audio", lq_send_audio, { lfp_peer, lfp_string, lfp_none }},
   {"send_document", lq_send_document, { lfp_peer, lfp_string, lfp_none }},
