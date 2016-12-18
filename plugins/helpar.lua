@@ -173,8 +173,7 @@ patterns = {
 "^(h2)$", 
 "^(h3)$", 
 "^(sudoar)$" 
-, 
 }, 
 run = run 
 } 
-end  
+end 
