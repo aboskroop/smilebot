@@ -13,7 +13,7 @@ sudo apt-get install libreadline-dev libconfig-dev libssl-dev lua5.2 liblua5.2-d
 # _______________
 #  القناه: [Zaza_Dev](https://telegram.me/C9_pro)
 
-#  ي    ??
+# كيف يتم تنصيب سورس زازا 👾
 
 # افتح تيرمنال وضع هذا الكود
 
