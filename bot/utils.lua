@@ -883,7 +883,7 @@ function kick_user_any(user_id, chat_id)
   local chat = 'chat#id'..chat_id
   local user = 'user#id'..user_id
   chat_del_user(chat, user, ok_cb, true)
-  channel_kick(channel, user, ok_cb, false)
+  channel_kick_user(channel, user, ok_cb, false)
 end
 
 -- Returns the name of the sender
@@ -898,7 +898,7 @@ function kick_user(user_id, chat_id)
   local chat = 'chat#id'..chat_id
   local user = 'user#id'..user_id
   chat_del_user(chat, user, ok_cb, false)
-  channel_kick(channel, user, ok_cb, false)
+  channel_kick_user(channel, user, ok_cb, false)
 end
 
 -- Ban
@@ -1146,7 +1146,7 @@ function Kick_by_reply(extra, success, result)
 		return "you can't kick mods,owner and admins"
 	end
 		chat_del_user(chat, 'user#id'..result.from.peer_id, ok_cb, false)
-		channel_kick(channel, 'user#id'..result.from.peer_id, ok_cb, false)
+		channel_kick_user(channel, 'user#id'..result.from.peer_id, ok_cb, false)
 	else
 		return
   end
@@ -1168,7 +1168,7 @@ function Kick_by_reply_admins(extra, success, result)
 		return
 	end
 		chat_del_user(chat, 'user#id'..result.from.peer_id, ok_cb, false)
-		channel_kick(channel, 'user#id'..result.from.peer_id, ok_cb, false)
+		channel_kick_user(channel, 'user#id'..result.from.peer_id, ok_cb, false)
 	else
 		return
 	end
@@ -1261,45 +1261,3 @@ function banall_by_reply(extra, success, result)
 		return
   end
 end
-----------------------------------------------------
--- MarkDown MOD  by Mustafa ip {@HackeD_o}
-function get_receiver_api(msg) 
-  if msg.to.type == 'user' then 
-    return msg.from.id 
-  end 
-  if msg.to.type == 'chat' then 
-    return '-'..msg.to.id 
-  end 
-  if msg.to.type == 'channel' then 
-    return '-100'..msg.to.id 
-  end 
-end 
--- MarkDown MOD  by Mustafa ip {@HackeD_o}
-function send_markdown(msg, receiver, text, disable_web_page_preview, markdown, reply_markup) 
-  local url_api = 'http://api.telegram.org/bot'..(_config.key)
-      ..'/sendMessage?chat_id='..receiver..'&text='..URL.escape(text) 
-  if disable_web_page_preview == true then 
-    url_api = url_api..'&disable_web_page_preview=true' 
-  end 
-  if markdown == 'md' then 
-    url_api = url_api..'&parse_mode=Markdown' 
-  elseif markdown == 'html' then 
-    url_api = url_api..'&parse_mode=HTML' 
-  end 
-  if reply_markup == 'rm' then
- 	    url_api = url_api.."&reply_markup="..reply_markup
- 	end
-  local dat, res = https.request(url_api) 
-  if res == 400 then 
-    reply_msg(msg.id, 'same probleam.\nCant send markdown', ok_cb, true) 
-  end 
-end 
-function send_api_keyboard(msg, receiver, text, keyboard)
-  local api_key = '242451729:AAFaaGmXUei7ro7462luER0LasIO0WIOhn8'
-  local api_key = 'http://api.telegram.org/bot'..(_config.key)
-  local url_api = 'https://api.telegram.org/bot'..api_key..'/sendMessage?chat_id='.. receiver..'&parse_mode=markdown&&text='..URL.escape(text)..'&disable_web_page_preview=true&reply_markup='..json:encode(keyboard)
-  local dat, res = https.request(url_api)
-  if res == 400 then
-    reply_msg(msg.id, 'Error 400.\nWhat ever that means...', ok_cb, true)
-  end
-  end
