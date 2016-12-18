@@ -175,8 +175,7 @@ patterns = {
 "^[!/#](help2)$", 
 "^[!/#](help3)$", 
 "^[!/#](sudo)$" 
-, 
 }, 
 run = run 
 } 
-end  
+end 
