@@ -3,7 +3,7 @@ do
 function run (msg, matches) 
 
 local reply_id = msg ['id'] 
-if matches[1]==  'help' and not is_momod(msg) then 
+if matches[1]==  'help' then 
 local wounds = [[👋 <b>Hello My Frend</b> 
 🙂🍃 <b>Tere are [3] list to help..</b> 
 ا➖➖➖➖➖➖➖➖➖ 
