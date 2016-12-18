@@ -1,5 +1,5 @@
-قنــــــــــــــــــــاة الســورس
-# [devill_bot](https://telegram.me/devill_bot)
+# Channel :
+# [Zaza_Dev](https://telegram.me/C9_pro)
 
 
 *******************************************************************
