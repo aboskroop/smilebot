@@ -1,4 +1,4 @@
-# Channel : [Zaza_Dev ?? ](https://telegram.me/C9_pro)
+# Channel : [Zaza_Dev 💡 ](https://telegram.me/C9_pro)
 
 # how install the bot
 
@@ -11,7 +11,7 @@ sudo apt-get install libreadline-dev libconfig-dev libssl-dev lua5.2 liblua5.2-d
 ```
 ## but phone number your bot 
 # _______________
-#  القناه: [Zaza_Dev](https://telegram.me/C9_pro)
+#  القناه: [Zaza_Dev 💡](https://telegram.me/C9_pro)
 
 # كيف يتم تنصيب سورس زازا 👾
 
