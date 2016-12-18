@@ -2248,7 +2248,7 @@ local function run(msg, matches)
 					unmute(chat_id, msg_type)
 					return reply_msg(msg.id,'💡 <b>Mute</b>'..msg_type..'</b><b>》has been disabled</b> 🔓',ok_cb, false)
 				else
-					return reply_msg(msg.id,💡 '<b>Mute</b><b>'..msg_type..'</b><b> 》is already disabled</b> 🔓',ok_cb, false)
+					return reply_msg(msg.id,'💡 <b>Mute</b><b>'..msg_type..'</b><b> 》is already disabled</b> 🔓',ok_cb, false)
 				end
 			end
 		end
