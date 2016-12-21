@@ -1,4 +1,4 @@
- #!/bin/bash
+#!/bin/bash
 
 
 memTotal_b=`free -b |grep Mem |awk '{print $2}'`
@@ -19,12 +19,17 @@ memUsed_m=$(($memTotal_m-$memFree_m-$memBuffer_m-$memCache_m))
 
 memUsedPrc=$((($memUsed_b*100)/$memTotal_b))
 
-echo "Memory: Sajad Aliraqe Total: $memTotal_m MB"
-echo "Memory Used: $memUsed_m MB - $memUsedPrc% used!"
-echo "Total : $memTotal_b"
-echo 'CPU Usage : '"$CPUPer"'%'
-echo 'Hdd : '"$hdd"'%'
-echo 'Processes : '"$ProcessCnt"
-echo 'Uptime : '"$uptime"
-echo "Bot - Net "
-echo "Coded By Sajad Aliraqe" 
+echo "🔱 SUDO TM SERVER INFO:"
+echo "➖➖➖➖"
+echo "✅ Memory: $memUsed_m MB (4GB) \n💠 $memUsedPrc% used !"
+echo "➖➖"
+echo '✅ CPU Usage : '"$CPUPer"'%'
+echo "➖➖"
+echo '✅ HDD used : '"$hdd"'%'
+echo "➖➖"
+echo '✅ Processes : '"$ProcessCnt"
+echo "➖➖"
+echo '✅ Uptime : '"$uptime"
+echo "➖➖➖➖"
+echo "⭕️ zaza bot!"
+echo ">> @wounds1"
