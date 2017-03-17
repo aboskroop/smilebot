@@ -1,4 +1,3 @@
-# Channel : [Zaza_Dev 💡 ](https://telegram.me/C9_pro)
 
 معلومات مهمه
 
