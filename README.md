@@ -5,13 +5,30 @@
 1-  لتفعيل الحمايه القصوى فعل ملف lock_link 
 من الكونفج او من خلال البوت بكتابه تفعيل ملف + اسم الملف
 
-2 ضع هذا الكود بلترمنل
+2 لتنصيب البوت ضع الاكواد بلسره
 
-sudo apt-get install libreadline-dev libconfig-dev libssl-dev lua5.2 liblua5.2-dev lua-socket lua-sec lua-expat libevent-dev make unzip git redis-server autoconf g++ libjansson-dev libpython-dev expat libexpat1-dev && git clone https://github.com/aboskroop/abo-skrop.git && cd smilebot && chmod +x launch.sh && ./launch.sh install && ./launch.sh
- 
-اذا ما طلب منك رقم اكتب  ./launch.sh 
+1-/  sudo apt-get update
 
-وحط رقمك وارفع نفسك مطور من الكونفغ ومبروك عليك
+2-/  sudo apt-get install libreadline-dev libconfig-dev libssl-dev lua5.2 liblua5.2-dev lua-socket lua-sec lua-expat libevent-dev make unzip git redis-server autoconf g++ libjansson-dev libpython-dev expat libexpat1-dev
+
+3-/  git clone https://github.com/aboskroop/smilebot.git
+
+4-/  cd smilebot
+
+5-/  chmod +x launch.sh
+
+6-/  ./launch.sh install
+
+7-/  ./launch.sh
+
+
+وحط رقمك وارفع نفسك مطور من الكونفغ 
+
+بعدين افتح ترمنل واكتب 
+
+redis-server
+
+ومبروك عليك السورس
 
 للاستفسار 
 @iq_100k
