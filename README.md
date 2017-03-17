@@ -1,24 +1,24 @@
 # Channel : [Zaza_Dev 💡 ](https://telegram.me/C9_pro)
 
-# how install the bot
+معلومات مهمه
 
-# Open Turmmal put this code 👇
-*******************************************************************
-```sh
 
-sudo apt-get install libreadline-dev libconfig-dev libssl-dev lua5.2 liblua5.2-dev lua-socket lua-sec lua-expat libevent-dev make unzip git redis-server autoconf g++ libjansson-dev libpython-dev expat libexpat1-dev && git clone https://github.com/wounds2/zazabot.git && cd zazabot && chmod +x launch.sh && ./launch.sh install && ./launch.sh
+1-  لتفعيل الحمايه القصوى فعل ملف lock_link 
+من الكونفج او من خلال البوت بكتابه تفعيل ملف + اسم الملف
 
-```
-## but phone number your bot 
-# _______________
-#  القناه: [Zaza_Dev 💡](https://telegram.me/C9_pro)
+2 ضع هذا الكود بلترمنل
 
-# كيف يتم تنصيب سورس زازا 👾
+sudo apt-get install libreadline-dev libconfig-dev libssl-dev lua5.2 liblua5.2-dev lua-socket lua-sec lua-expat libevent-dev make unzip git redis-server autoconf g++ libjansson-dev libpython-dev expat libexpat1-dev && git clone https://github.com/aboskroop/abo-skrop.git && cd smilebot && chmod +x launch.sh && ./launch.sh install && ./launch.sh
+ 
+اذا ما طلب منك رقم اكتب  ./launch.sh 
 
-# 👇 افتح تيرمنال وضع هذا الكود 
+وحط رقمك وارفع نفسك مطور من الكونفغ ومبروك عليك
 
-sudo apt-get install libreadline-dev libconfig-dev libssl-dev lua5.2 liblua5.2-dev lua-socket lua-sec lua-expat libevent-dev make unzip git redis-server autoconf g++ libjansson-dev libpython-dev expat libexpat1-dev && git clone https://github.com/wounds2/zazabot.git && cd zazabot && chmod +x launch.sh && ./launch.sh install && ./launch.sh
+للاستفسار 
+@iq_100k
+@heelp_bot
 
-# اضغط انتر ثم ضع رقم البوت وارفع نفسك مطور  🤖
+قناه البوت
+@porgramer2017
 
-# تحياتي (جروح بلادي)"منير"
+# Channel : [porgramer2017 💡 ](https://telegram.me/C9_pro)
