@@ -1,1 +1,0 @@
-,"lock_spam":"yes","public":"no","flood":"yes","strict":"no"},"long_id":"$05000000e356813fee60d89aa026de43","group_type":"SuperGroup"}}
