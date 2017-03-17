@@ -7,7 +7,6 @@ do local _ = {
     "addreply",
     "anti_spam",
     "arabic_lock",
-    "badword",
     "decoration",
     "broadcast",
     "delete_msgs",
