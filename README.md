@@ -1,3 +1,5 @@
+# Channel : [porgramer2017 💡 ](t.me/porgramer2017)
+
 
 معلومات مهمه
 
@@ -37,4 +39,4 @@ redis-server
 قناه البوت
 @porgramer2017
 
-# Channel : [porgramer2017 💡 ](https://telegram.me/C9_pro)
+# Channel : [porgramer2017 💡 ](t.me/porgramer2017)
